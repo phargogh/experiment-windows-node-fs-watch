@@ -1,0 +1,6 @@
+{
+        "main": "bin/index.js",
+        "bin": {
+            "hello": "./bin/index.js"
+        }
+}
