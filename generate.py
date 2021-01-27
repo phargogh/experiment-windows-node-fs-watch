@@ -14,15 +14,18 @@ def append():
         time.sleep(1)
 
 
-def write():
+def write(flush=False):
     counter = 0
     with open(out_file, 'w') as opened_file:
         while True:
             opened_file.write(f'{counter}\n')
+            if flush:
+                opened_file.flush()
             counter += 1
             time.sleep(1)
 
 
 if __name__ == '__main__':
     #append()
-    write()
+    #write()
+    write(flush=True)
